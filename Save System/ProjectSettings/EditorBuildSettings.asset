@@ -6,8 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Platformer Example/Scenes/Plat Level Select.unity
+    guid: 1d9bb0d00d31176408b2852a933bca4b
+  - enabled: 1
+    path: Assets/Platformer Example/Scenes/Plat_Level_1.unity
+    guid: a3c407144ff7db241a76b2c9503207a2
+  - enabled: 1
+    path: Assets/Platformer Example/Scenes/Plat_Level_2.unity
+    guid: 86c3af6734a84df4d867867794fbe638
+  - enabled: 1
+    path: Assets/Platformer Example/Scenes/Plat_Level_3.unity
+    guid: 564a58d4bbf16b14f831dbfafa6bfe77
+  - enabled: 1
+    path: Assets/Dungeon Battler Example/Scenes/Dungeon Main Menu.unity
+    guid: 02363e42e37355849b441f30f4429105
+  - enabled: 1
+    path: Assets/Dungeon Battler Example/Scenes/Dungeon 1.unity
+    guid: 019ec8f98b6441845ada9db09c2e649b
+  - enabled: 1
+    path: Assets/Dungeon Battler Example/Scenes/Dungeon 2.unity
+    guid: d96310699ded26044aa989f3010388f4
+  - enabled: 1
+    path: Assets/Dungeon Battler Example/Scenes/Dungeon 3.unity
+    guid: cee36fadbc1c43742a5aecb652cd1219
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
