@@ -163,7 +163,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af711442ffec6d14494d149c669c84c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testString: 
+  dataToSave:
+    text: Mario
+    number: 0
+    wholeNumber: 0
+    places: []
+    typeOfInfo: 0
+    moreData:
+      text: 
+      isItTrue: 0
 --- !u!1 &1392457985
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,6 +28,12 @@ public class DungeonLevelManager : MonoBehaviour
     {
         DungeonUIController.instance.StartFadeToBlack();
 
+        if(nextLevel != SaveSystem.instance.sceneNotToSave)
+        {
+            UpdateSaveSystem();
+            SaveSystem.instance.Save();
+        }
+    
         yield return new WaitForSeconds(.5f);
 
         if (nextLevel != "")
@@ -38,5 +44,20 @@ public class DungeonLevelManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    void UpdateSaveSystem()
+    {
+        DungeonPlayerStats stats = DungeonPlayerStats.instance;
+
+        SaveSystem.instance.activeSave.strenght = stats.strength;
+        SaveSystem.instance.activeSave.defense = stats.defence;
+        SaveSystem.instance.activeSave.level = stats.level;
+        SaveSystem.instance.activeSave.currentExp = stats.currentXP;
+        SaveSystem.instance.activeSave.expToLevel = stats.xpToLevel;
+        SaveSystem.instance.activeSave.maxHP = stats.maxHP;
+
+        SaveSystem.instance.activeSave.currentHP = DungeonPlayer.instance.currentHealth;
+        SaveSystem.instance.activeSave.currentLevel = nextLevel;
     }
 }

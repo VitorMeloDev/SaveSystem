@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class XMLSaveExample : MonoBehaviour
 {
-    public string testString;
+    public SaveDataExample dataToSave;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,9 +47,9 @@ public class XMLSaveExample : MonoBehaviour
 
         string dataPath = Application.persistentDataPath;
 
-        var serializer = new XmlSerializer(typeof(string));
+        var serializer = new XmlSerializer(typeof(SaveDataExample));
         var stream = new FileStream(dataPath + "/testSave.save", FileMode.Create);
-        serializer.Serialize(stream, testString);
+        serializer.Serialize(stream, dataToSave);
         stream.Close();
     }
 
@@ -61,9 +61,9 @@ public class XMLSaveExample : MonoBehaviour
 
         if(File.Exists(dataPath + "/testSave.save"))
         {
-            var serializer = new XmlSerializer(typeof(string));
+            var serializer = new XmlSerializer(typeof(SaveDataExample));
             var stream = new FileStream(dataPath + "/testSave.save", FileMode.Open);
-            testString = serializer.Deserialize(stream) as string;
+            dataToSave = serializer.Deserialize(stream) as SaveDataExample;
             stream.Close();
         }
     }

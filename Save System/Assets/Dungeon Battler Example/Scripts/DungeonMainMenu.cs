@@ -68,7 +68,10 @@ public class DungeonMainMenu : MonoBehaviour
 
     IEnumerator ContinueCo()
     {
+        SaveSystem.instance.Load();
+        
         StartFadeToBlack();
         yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SaveSystem.instance.activeSave.currentLevel);
     }
 }

@@ -103,6 +103,8 @@ public class DungeonUIController : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        SaveSystem.instance.DestroySaveSystem();
         SceneManager.LoadScene(mainMenuScene);
+        Time.timeScale = 1f;
     }
 }
